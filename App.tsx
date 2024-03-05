@@ -13,7 +13,10 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>Mis Tareas por realizar</Text>
       <View style={styles.inputContainer}>
-        <TextInput style={styles.textIpunt} />
+        <TextInput
+          placeholder='Agrega una nueva tarea'
+          style={styles.textIpunt}
+        />
         <TouchableOpacity style={styles.addButton}>
           <Text style={styles.whiteText}>Agregar</Text>
         </TouchableOpacity>
