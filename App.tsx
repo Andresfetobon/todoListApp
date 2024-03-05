@@ -1,5 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 
 export default function App() {
   return (
@@ -7,6 +14,9 @@ export default function App() {
       <Text style={styles.title}>Mis Tareas por realizar</Text>
       <View style={styles.inputContainer}>
         <TextInput style={styles.textIpunt} />
+        <TouchableOpacity style={styles.addButton}>
+          <Text style={styles.whiteText}>Agregar</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -33,8 +43,21 @@ const styles = StyleSheet.create({
   textIpunt: {
     borderColor: '#6f6f6f',
     borderWidth: 1,
+    width: Dimensions.get('screen').width * 0.6,
+    borderRadius: 10,
+    paddingLeft: 10,
   },
   inputContainer: {
     marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  addButton: {
+    width: Dimensions.get('screen').width * 0.2,
+    backgroundColor: '#5897fb',
+    justifyContent: 'center',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 10,
   },
 });
